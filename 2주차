@@ -15,7 +15,7 @@ void loop()
   delay(500);
 }
 
-
+// 빨강red 초록red 반복.txt
 
 int red1 = 7;
 int grd1 = 8;
