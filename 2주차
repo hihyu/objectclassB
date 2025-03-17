@@ -1,3 +1,5 @@
+// 빨강 red 1개.txt
+
 int red1 = 7;
 
 void setup()
