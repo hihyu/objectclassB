@@ -55,14 +55,14 @@ write_api = client.write_api()
 try:
     ser = serial.Serial(serial_port, baudrate, timeout=timeout)
     print(f"Connected to {serial_port} at {baudrate} baud")
-except serial.SerialException;
+except serial.SerialException:
     print("Failed to connect to serial port.")
     exit()
 
 # == (4) 시리얼 데이터 읽기 및 InfluxDB 저장 ===
 try:
     while True:
-        if ser.in_waiting > 0;
+        if ser.in_waiting > 0:
             line = ser.readline().decode('utf-8').strip() # 시리얼 데이터 읽기
             print(f"Received: {line}")
 
@@ -72,7 +72,7 @@ try:
                 try:
                     value = float(value) # 숫자로 변환
                     # influxDB 2.x 데이터 포맷
-                    data = f"sensor_data, device = arduino {key}={value}"
+                    data = f"sensor_data,device = arduino {key}={value}"
                     write_api.write(bucket=influxdb_bucket, record=data)
                     print(f"Data written to InfluxDB: {key} = {value}")
 
