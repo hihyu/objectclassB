@@ -1,0 +1,4 @@
+Sudo apt intall vim -y
+mkdir // 디렉토리 생성
+ls // 위치 확인
+cd // 파일 이동
