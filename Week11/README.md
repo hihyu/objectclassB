@@ -22,6 +22,10 @@ sudo service influxdb status
 ```
 pip install influxdb
 ```
+  - hint: See PEP 668 for the detailed specification.
+```
+sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+```
 
 ## InfluxDB 데이터베이스 만들기
 ```
