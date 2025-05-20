@@ -18,6 +18,11 @@ sudo service influxdb start
 sudo service influxdb status
 ```
 
+## influxdb import with python
+```
+pip install influxdb
+```
+
 ## InfluxDB 데이터베이스 만들기
 ```
 $ influx
